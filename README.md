@@ -8,7 +8,7 @@ Discussing things you care about can be difficult. The threat of abuse and haras
 The Conversation AI team, a research initiative founded by Jigsaw and Google (both a part of Alphabet) are working on tools to help improve online conversation. One area of focus is the study of negative online behaviors, like toxic comments (i.e. comments that are rude, disrespectful or otherwise likely to make someone leave a discussion). So far they’ve built a range of publicly available models served through the Perspective API, including toxicity. But the current models still make errors, and they don’t allow users to select which types of toxicity they’re interested in finding (e.g. some platforms may be fine with profanity, but not with other types of toxic content).</p>
 
 <a href="https://pantelis.github.io/artificial-intelligence/aiml-common/projects/nlp/finetuning-language-models-tweets/index.html">Source</a>
-<h1>Installation</h1>
+<h1>Initial Setup</h1>
 
 <p>For this project, I am using VSCode as my IDE with "Docker" and "Dev Containers" extensions installed. I will be creating a Docker dev envronment to build my project in, as it allows for standardization of libraries across machines.</p>
 
