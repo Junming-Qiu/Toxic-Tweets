@@ -25,6 +25,8 @@ The Conversation AI team, a research initiative founded by Jigsaw and Google (bo
 <img src="./Documentation/config.png"/>
 <p>Verify that the container is running by running "docker ps" in the command line</p>
 <img src="./Documentation/terminal.png"/>
+<p>Connect to docker container using CLI</p>
+<img src="./Documentation/CLI_conn.png"/>
 <p>For CLI creation of a dev environment, use this <a href="https://docs.docker.com/desktop/dev-environments/set-up/">resource</a></p>
 
 <h2></h2>
