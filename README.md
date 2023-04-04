@@ -10,6 +10,11 @@ pinned: false
 ---
 
 # Toxic-Tweets
+<h3>Milestone Submissions</h3>
+<ol>
+    <li>Milestone 1: Setup Instructions</li>
+    <li>Milestone 2: Hugging Face Space: <a href="https://huggingface.co/spaces/junming-qiu/toxic-tweets-milestone-2">Hugging Face Milestone 2 Demo</a></li>
+</ol>
 
 <h1>Motivation</h1>
 <p>The internet has been converted from a tool offering unprecedented utility to mankind to a tool that can can destabilize societies and ven cause individuals to take their own lives.
