@@ -1,3 +1,14 @@
+---
+title: Toxic Tweets Milestone 2
+emoji: 🐢
+colorFrom: blue
+colorTo: red
+sdk: streamlit
+sdk_version: 1.17.0
+app_file: app.py
+pinned: false
+---
+
 # Toxic-Tweets
 
 <h1>Motivation</h1>
