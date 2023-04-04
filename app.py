@@ -8,9 +8,8 @@ models = ["cardiffnlp/twitter-xlm-roberta-base-sentiment", "nlptown/bert-base-mu
 
 
 st.title('Sentiment Analysis Demo')
-st.markdown("Junming Qiu")
 with st.form("form"):
-    selection = st.selectbox('Select Transformer', models)
+    selection = st.selectbox('Select Transformer:', models)
     text = st.text_input('Enter text: ', "I do not like to walk")
     submitted = st.form_submit_button('Submit')
 
@@ -19,4 +18,6 @@ with st.form("form"):
         model = AutoModelForSequenceClassification.from_pretrained(model_name)
         tokenizer = AutoTokenizer.from_pretrained(model_name)
         classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
-        st.write(classifier(text))
+        result = classifier(text)
+        st.write("Label:", result[0]["label"])
+        st.write('Score: ', result[0]['score'])
