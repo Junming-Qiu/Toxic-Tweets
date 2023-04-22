@@ -1,18 +1,17 @@
 import streamlit as st
 from transformers import pipeline
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-from transformers import BertTokenizer, BertForSequenceClassification
 from huggingface_hub.inference_api import InferenceApi
 import os
 
-models = ["cardiffnlp/twitter-xlm-roberta-base-sentiment", "nlptown/bert-base-multilingual-uncased-sentiment", "Tatyana/rubert-base-cased-sentiment-new", "junming-qiu/BertToxicClassifier"]
+models = ["junming-qiu/BertToxicClassifier", "cardiffnlp/twitter-xlm-roberta-base-sentiment", "nlptown/bert-base-multilingual-uncased-sentiment", "Tatyana/rubert-base-cased-sentiment-new"]
 
 
 
 st.title('Sentiment Analysis Demo')
 with st.form("form"):
     selection = st.selectbox('Select Transformer:', models)
-    text = st.text_input('Enter text: ', "I do not like to walk")
+    text = st.text_input('Enter text: ', "I hate people who walk")
     submitted = st.form_submit_button('Submit')
 
     if submitted:
@@ -20,11 +19,26 @@ with st.form("form"):
 
         if model_name == "junming-qiu/BertToxicClassifier":
             API_TOKEN=os.environ['API-KEY']
+
             inference = InferenceApi(repo_id=model_name, token=API_TOKEN)
             predictions = inference(inputs=text)[0]
             predictions = sorted(predictions, key=lambda x: x['score'], reverse=True)
-            st.write(predictions[0]['label']+":", predictions[0]['score'])
-            st.write(predictions[1]['label']+":", predictions[1]['score'])
+
+            hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+
+            st.markdown(hide_table_row_index, unsafe_allow_html=True)
+
+            output = [
+                        {"tweet": text,
+                        "label": predictions[0]['label'],
+                        "score" : predictions[0]['score']},
+                    ]       
+            st.table(output)
         else:
 
             model = AutoModelForSequenceClassification.from_pretrained(model_name)
