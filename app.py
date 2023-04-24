@@ -36,7 +36,9 @@ with st.form("form"):
             output = [
                         {"tweet": text,
                         "label": predictions[0]['label'],
-                        "score" : predictions[0]['score']},
+                        "score" : predictions[0]['score'],
+                        "label 2": predictions[1]['label'],
+                        "score 2" : predictions[1]['score']},
                     ]       
             st.table(output)
         else:
