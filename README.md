@@ -1,5 +1,5 @@
 ---
-title: Toxic Tweets Milestone 4
+title: Toxic Tweets Milestone 3
 emoji: 🐢
 colorFrom: blue
 colorTo: red
@@ -15,7 +15,6 @@ pinned: false
     <li>Milestone 1: Setup Instructions</li>
     <li>Milestone 2: Hugging Face Space: <a href="https://huggingface.co/spaces/junming-qiu/toxic-tweets-milestone-2">Hugging Face Milestone 2 Demo</a></li>
     <li>Milestone 3: Fine Tuned Toxic Comment model: <a href="https://huggingface.co/spaces/junming-qiu/toxic-tweets-milestone-2">Hugging Face Milestone 3 Demo</a></li>
-    <li>Milestone 4: Documentation</li>
 </ol>
 
 <h1>Motivation</h1>
