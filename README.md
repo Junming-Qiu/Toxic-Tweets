@@ -16,6 +16,11 @@ pinned: false
     <li>Milestone 2: Hugging Face Space: <a href="https://huggingface.co/spaces/junming-qiu/toxic-tweets-milestone-2">Hugging Face Milestone 2 Demo</a></li>
     <li>Milestone 3: Fine Tuned Toxic Comment model: <a href="https://huggingface.co/spaces/junming-qiu/toxic-tweets-milestone-2">Hugging Face Milestone 3 Demo</a></li>
     <li>Milestone 4: Documentation</li>
+    <ol>
+        <li><a href="https://github.com/Junming-Qiu/Toxic-Tweets">Documentation (Github)</a></li>
+        <li><a href="https://sites.google.com/nyu.edu/toxic-tweet-classifier/home">Project Launch Page</a></li>
+        <li><a href="https://youtu.be/TzLBOqor5F4">Video Demonstration</a></li>
+    </ol>
 </ol>
 
 <h1>Motivation</h1>
@@ -107,13 +112,16 @@ sync-to-hub:
             <li>Evaluate the trainer and save the model</li>
         </ul>
     </li>
-    <li>Upload the new model on HuggingFace space</li>
+    <li>Upload the new model on HuggingFace space using the huggingface_hub python package</li>
 </ol>
 <h1>Results and Conclusion (Milestone 4)</h1>
 <h2>Deliverables:</h2>
 <ol>
-    <li>Documentation (Github)</li>
-    <li>Project Launch Page</li>
-    <li>Video Demonstration</li>
+    <li><a href="https://github.com/Junming-Qiu/Toxic-Tweets">Documentation (Github)</a></li>
+    <li><a href="https://sites.google.com/nyu.edu/toxic-tweet-classifier/home">Project Launch Page</a></li>
+    <li><a href="https://youtu.be/TzLBOqor5F4">Video Demonstration</a></li>
 </ol>
+<h2>Results:</h2>
+<p>Running the evaluator for my model, I was able to achieve a loss of 0.004, meaning that the predicted values were close to the real values in my dataset. Overall, my model works well on the Tweet data provided, and can accurately classify them. However, some Tweets have many labels, and due to the unbalance in data, my model is unable to predict all of these labels.<br/><br/>
+Testing my model, it also performs well in most scenarios where toxicity is obvious. However, it does not perform as well when certain phrases and keywords are used, such as "[noun] is a [noun]". In this case, even if this phrase is not toxic, my model will still classify it as somewhat toxic, purely because of how common this phrase is used in Tweets as a toxic comment. My model did get more accurate with more input/context, so this may be a potential solution to avoiding making false positive predictions. </p>
 
